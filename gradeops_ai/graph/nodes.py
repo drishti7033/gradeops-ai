@@ -1,7 +1,7 @@
-from app.graph.state import GraphState
-from app.ocr.ocr_pipeline import run_ocr
-from app.parser.question_parser import parse_exam_text
-from app.evaluation.evaluator import evaluate_exam
+from gradeops_ai.graph.state import GraphState
+from gradeops_ai.ocr.ocr_pipeline import run_ocr
+from gradeops_ai.parser.question_parser import parse_exam_text
+from gradeops_ai.evaluation.evaluator import evaluate_exam
 
 def extract_text_node(state: GraphState) -> GraphState:
     image_path = state["image_path"]

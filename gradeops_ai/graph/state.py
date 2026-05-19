@@ -1,7 +1,7 @@
 from typing import Dict, Any, Optional
 from typing_extensions import TypedDict
-from app.parser.schema import ParsedExam
-from app.evaluation.output_parser import ExamEvaluationResult
+from gradeops_ai.parser.schema import ParsedExam
+from gradeops_ai.evaluation.output_parser import ExamEvaluationResult
 
 class GraphState(TypedDict):
     # Inputs

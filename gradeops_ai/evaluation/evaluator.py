@@ -1,10 +1,10 @@
 import os
 from typing import Dict, Any, List
 from langchain_groq import ChatGroq
-from app.evaluation.prompts import grading_prompt
-from app.evaluation.output_parser import SingleEvaluationResult, ExamEvaluationResult
-from app.evaluation.rubric_engine import format_rubric_for_prompt
-from app.parser.schema import ParsedExam
+from gradeops_ai.evaluation.prompts import grading_prompt
+from gradeops_ai.evaluation.output_parser import SingleEvaluationResult, ExamEvaluationResult
+from gradeops_ai.evaluation.rubric_engine import format_rubric_for_prompt
+from gradeops_ai.parser.schema import ParsedExam
 
 def evaluate_exam(parsed_exam: ParsedExam, rubric_data: Dict[str, Any], submission_id: str) -> ExamEvaluationResult:
     llm = ChatGroq(model="llama3-70b-8192", temperature=0)

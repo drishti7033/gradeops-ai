@@ -1,6 +1,6 @@
 from langgraph.graph import StateGraph, END
-from app.graph.state import GraphState
-from app.graph.nodes import extract_text_node, parse_text_node, evaluate_node
+from gradeops_ai.graph.state import GraphState
+from gradeops_ai.graph.nodes import extract_text_node, parse_text_node, evaluate_node
 
 def route_after_ocr(state: GraphState) -> str:
     if state.get("error"):
